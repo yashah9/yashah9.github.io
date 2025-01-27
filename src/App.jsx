@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import ReactDOM from "react-dom/client";
+
 
 import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 
