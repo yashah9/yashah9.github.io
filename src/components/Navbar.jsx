@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { styles } from "../style";
 import { navLinks } from "../constants";
 import {  menu, close } from "../assets";
-import logo from "../assets/y-high-resolution-logo.png"; // Corrected import
+
 
 
 const Navbar = () => {
@@ -44,7 +44,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Yash Shah&nbsp;
             <span className='sm:block hidden'> | Data Engenieer</span>

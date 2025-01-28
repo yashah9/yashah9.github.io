@@ -6,11 +6,11 @@ import { technologies } from "../constants";
 
 const Tech = () => {
   return (
-    <div className="flex flex-row flex-wrap justify-center gap-10">
+    <div className="flex flex-row flex-wrap justify-center gap-20">
       {technologies.map((technology) => (
         <div className="flex flex-col items-center w-28 h-28" key={technology.name}>
           <BallCanvas icon={technology.icon} />
-          <p className="mt-2 text-center text-sm font-medium">{technology.name}</p>
+          <p className="mt-1 text-center text-sm font-medium">{technology.name}</p>
         </div>
       ))}
     </div>
