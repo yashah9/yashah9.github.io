@@ -43,16 +43,24 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
-      </motion.p>
+     
+        <div className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+          <p>
+            Hi, I'm Yash Shah, a graduate MS in CS student at NJIT with knowledge in full-stack development,
+            cloud computing, and scalable backend systems. I work on building high-performance applications
+            using React, Node.js, Python, AWS, and distributed systems like Kafka.
+          </p>
+          <br />
+          <p>
+            With a background in computer science and hands-on experience in software development, 
+            I enjoy designing efficient architectures and optimizing system performance.
+          </p>
+          <br />
+          <p>
+            I'm a quick learner and collaborate closely to create efficient, scalable, and user-friendly solutions that
+            solve real-world problems. Let's work together! Check out my projects below and feel free to connect! 🚀
+          </p>
+        </div>   
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (

@@ -4,26 +4,26 @@ import {
     backend,
     creator,
     web,
-    javascript,
     typescript,
-    html,
-    css,
+    aws,
+    post,
+    flask,
     reactjs,
-    redux,
     tailwind,
     nodejs,
     mongodb,
+    spark,
     git,
-    figma,
+    njit,
+    kafka,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
-    carrent,
-    jobit,
-    tripguide,
-    threejs,
+    finance,
+    summarizer,
+    word,
+    python,
+    trello,
+    express,
+    Youtube,
   } from "../assets";
   
   export const navLinks = [
@@ -43,48 +43,42 @@ import {
   
   const services = [
     {
+      title: "Backend Developer",
+      icon: backend,
+    }, 
+    {
       title: "Web Developer",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Software Engineer",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
-      icon: backend,
-    },
-    {
-      title: "Content Creator",
+      title: "Data Engineer",
       icon: creator,
     },
   ];
   
   const technologies = [
     {
-      name: "HTML",
-      icon: html,
+      name: "Python",
+      icon: python,
     },
     {
-      name: "CSS",
-      icon: css,
+      name: "Postgre SQL",
+      icon: post,
     },
     {
-      name: "JavaScript",
-      icon: javascript,
-    },
-    {
-      name: "TypeScript",
-      icon: typescript,
+      name: "AWS" , 
+      icon: aws,
+// "https://www.credly.com/badges/da2f0088-c743-4960-8f3e-9917687748b8/public_url"
     },
     {
       name: "React JS",
       icon: reactjs,
     },
-    {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
+
     {
       name: "Tailwind CSS",
       icon: tailwind,
@@ -98,135 +92,153 @@ import {
       icon: mongodb,
     },
     {
-      name: "git",
+      name: "TypeScript",
+      icon: typescript,
+    },
+    {
+      name: "Express JS",
+      icon: express,
+    },
+    {
+      name: "Flask",
+      icon: flask,
+    },
+    {
+      name: "Kafka",
+      icon: kafka,
+    },
+    {
+      name: "Git",
       icon: git,
     },
     {
       name: "docker",
       icon: docker,
     },
+
+    
+    {
+      name: "Spark",
+      icon: spark,
+    },
   ];
   
   const experiences = [
+ 
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "March 2020 - April 2021",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
+      title: "Undergraduate Computer Science tutor",
+      company_name: "New Jersey Institute of Technology",
+      icon: njit,
       iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
+      date: "January 2024 – May 2024",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Mentored 15+ peers in core programming (OOP, algorithms) and software development concepts in Python and SQL.",
+        "Assisted students in debugging, optimizing code, and implementing algorithms, improving their problem-solving skills and coding efficiency.",
       ],
     },
-    {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
+    
+    
   ];
   
 
   
   const projects = [
     {
-      name: "Car Rent",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+      name: "Trello - Clone",
+  description: [
+    " Designed and developed a Trello-like task management system with a modern UI using Next.js, React.js, and Redux for efficient state management. \n",
+    "Integrated role-based project and task management, allowing teams to assign tasks, set deadlines, and prioritize work efficiently.",
+    "Engineered a RESTful API with Express.js and Node.js, utilizing Prisma ORM with PostgreSQL for structured data storage and retrieval.",
+    "Deployed on AWS, leveraging EC2 for hosting, RDS for database management, Amplify for frontend deployment, S3 for file storage, API Gateway for backend communication, and Cognito for future authentication expansion."
+  ],
+  
+  tags: [
+    { name: "TypeScript", color: "blue-text-gradient" },
+    { name: "Next.js", color: "purple-text-gradient" },
+    { name: "React.js", color: "blue-text-gradient" },
+    { name: "Redux", color: "red-text-gradient" },
+    { name: "Express.js", color: "yellow-text-gradient" },
+    { name: "Node.js", color: "green-text-gradient" },
+    { name: "Prisma", color: "pink-text-gradient" },
+    { name: "PostgreSQL", color: "cyan-text-gradient" },
+    { name: "AWS", color: "orange-text-gradient" },
+    { name: "Tailwind CSS", color: "blue-text-gradient" }
+  ],
+      image: trello,
+      source_code_link: "https://github.com/yashah9/Trello-Clone",
     },
     {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
+      name: "BudgetBuddy (Finance Tracker)",
+      description: [
+        "Developed a full-stack finance tracking system, enabling users to efficiently manage expenses and income with MySQL relational data handling.",
+        "Implemented filtering and sorting options for transaction data, allowing users to organize financial records by date, category, and amount for better analysis.",
+        "Created a customer service chatbot that facilitated step-by-step navigation for users on the website, leading to a 20% decrease in abandonment rates and empowering users with instant access to information."
       ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+  
+      tags: [
+        { name: "JavaScript", color: "yellow-text-gradient" },
+        { name: "MySQL", color: "blue-text-gradient" },
+        { name: "PHP", color: "purple-text-gradient" },
+        { name: "Python", color: "green-text-gradient" },
+        { name: "HTML", color: "orange-text-gradient" },
+        { name: "CSS", color: "pink-text-gradient" }
+      ],
+      image: finance,
+      source_code_link: "https://github.com/yashah9/Finance_Tracker",
     },
     {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
+      name: "Word-Drop (Typing Game)",
+      description: [
+        "Led a team in designing and developing an interactive typing game using React.js, improving user engagement.",
+        "Integrated Auth0 authentication to provide secure user login and session management.",
+        "Introduced game mechanics such as power-ups, score multipliers, and WPM tracking, leading to improved user retention and also resulting in a personal 10 WPM increase in typing speed."
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      
+      tags: [
+        { name: "React.js", color: "blue-text-gradient" },
+        { name: "Firebase", color: "orange-text-gradient" },
+        { name: "Auth0", color: "purple-text-gradient" },
+        { name: "HTML", color: "yellow-text-gradient" },
+        { name: "CSS", color: "pink-text-gradient" }
+      ],
+          image: word,
+          source_code_link: "https://github.com/yashah9/Word-Drop-TypingGame-",
+    },
+    {
+      name: "YouTube Clone",
+      description: [
+        "Developed a YouTube-inspired web application with video upload, processing, and streaming capabilities using Next.js and Firebase.",
+        "Built a scalable backend pipeline with Node.js and Google Cloud Functions to handle file uploads, format conversions, and cloud storage.",
+        "Deployed containerized services with Docker on Google Cloud Run, optimizing resource allocation with serverless infrastructure."
+      ],
+    
+      tags: [
+        { name: "React.js", color: "blue-text-gradient" },
+        { name: "Next.js", color: "purple-text-gradient" },
+        { name: "Express.js", color: "yellow-text-gradient" },
+        { name: "Firebase", color: "orange-text-gradient" },
+        { name: "Google Cloud", color: "cyan-text-gradient" },
+        { name: "Docker", color: "blue-text-gradient" },
+        { name: "TypeScript", color: "red-text-gradient" }
+      ],
+      image: Youtube,
+      source_code_link: "https://github.com/yashah9/Youtube-clone",
+    },
+    {
+      name: "AI Text Summarization Web Application",
+      description: [
+        "Designed a responsive and accessible UI using Tailwind CSS, ensuring a seamless user experience across different devices.",
+        "Built an NLP-powered text summarization tool using FastAPI and Flask, reducing document processing time by ~3 seconds on average."
+        
+      ],
+      
+      tags: [
+        { name: "Python (Flask, NLTK)", color: "orange-text-gradient" },
+        { name: "HTML", color: "yellow-text-gradient" },
+        { name: "Tailwind CSS", color: "pink-text-gradient" }
+      ],
+          image: summarizer,
+          source_code_link: "https://github.com/yashah9/Summarizer",
     },
   ];
   

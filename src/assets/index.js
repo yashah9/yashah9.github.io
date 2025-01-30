@@ -7,16 +7,15 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import css from "./tech/css.png";
+
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
+
 import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
+
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
@@ -29,6 +28,21 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import trello from "./trello.png";
+import njit from "./njit.png";
+import finance from "./finance.png";
+import word from "./word.png";
+import summarizer from "./summarizer.png";
+import python from "./python.png";
+import flask from "./flask.png";
+import aws from "./aws.png";
+import post from "./post.png";
+import kafka from "./kafka.png";
+import spark from "./spark.png";
+import express from "./express.png";
+import Youtube from "./Youtube.png";
+
+
 
 export {
   logo,
@@ -39,24 +53,33 @@ export {
   github,
   menu,
   close,
-  css,
   docker,
   figma,
   git,
-  html,
-  javascript,
+  aws,
   mongodb,
   nodejs,
   reactjs,
-  redux,
   tailwind,
   typescript,
   threejs,
   meta,
+  post,
   shopify,
   starbucks,
   tesla,
   carrent,
+  Youtube,
   jobit,
   tripguide,
+  trello,
+  njit,
+  finance,
+  word,
+  summarizer,
+  python,
+  kafka,
+  flask,
+  spark,
+  express,
 };
