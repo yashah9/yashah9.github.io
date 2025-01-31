@@ -32,15 +32,18 @@ import trello from "./trello.png";
 import njit from "./njit.png";
 import finance from "./finance.png";
 import word from "./word.png";
-import summarizer from "./summarizer.png";
+import search from "./search.png";
 import python from "./python.png";
 import flask from "./flask.png";
+import dash from "./dash.png";
 import aws from "./aws.png";
 import post from "./post.png";
 import kafka from "./kafka.png";
+import city from "./city.png";
 import spark from "./spark.png";
 import express from "./express.png";
 import Youtube from "./Youtube.png";
+
 
 
 
@@ -61,6 +64,7 @@ export {
   nodejs,
   reactjs,
   tailwind,
+  dash,
   typescript,
   threejs,
   meta,
@@ -68,6 +72,7 @@ export {
   shopify,
   starbucks,
   tesla,
+  city,
   carrent,
   Youtube,
   jobit,
@@ -76,7 +81,7 @@ export {
   njit,
   finance,
   word,
-  summarizer,
+  search,
   python,
   kafka,
   flask,

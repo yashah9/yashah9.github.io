@@ -5,30 +5,34 @@ import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
-  const MemoizedComputersCanvas = useMemo(() => <ComputersCanvas />, []); // ✅ Memoized
+  const MemoizedComputersCanvas = useMemo(() => <ComputersCanvas />, []);
 
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className={`relative w-full min-h-screen flex flex-col justify-between mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[100px] max-w-7xl mx-auto ${styles.paddingX} flex flex-col sm:flex-row items-center sm:items-start gap-5`}
       >
-        <div className='flex flex-col justify-center items-center mt-5'>
+        <div className='flex flex-col justify-center items-center sm:mt-5'>
           <div className='w-5 h-5 rounded-full bg-[#915EFF]' />
           <div className='w-1 sm:h-80 h-40 violet-gradient' />
         </div>
 
-        <div>
+        <div className="text-center sm:text-left">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className='text-[#915EFF]'>Yash</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className='sm:block hidden' />
-            interfaces and web applications
+          <p className="mt-3 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
+            I develop <span className="text-[#915EFF] text-2xl sm:text-3xl md:text-4xl font-bold">Web Applications</span> 
+          </p>
+          <p className="text-white text-base sm:text-lg md:text-xl mt-1">
+            in Python and Javascript
           </p>
         </div>
       </div>
 
-      {MemoizedComputersCanvas} {/* ✅ Now only mounts once */}
+      <div className="relative w-full flex justify-center items-end">
+        {MemoizedComputersCanvas}
+      </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href='#about'>

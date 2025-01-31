@@ -1,4 +1,4 @@
-import { string } from "three/tsl";
+
 import {
     mobile,
     backend,
@@ -16,9 +16,11 @@ import {
     git,
     njit,
     kafka,
+    city,
     docker,
     finance,
-    summarizer,
+    search,
+    dash,
     word,
     python,
     trello,
@@ -225,20 +227,54 @@ import {
       source_code_link: "https://github.com/yashah9/Youtube-clone",
     },
     {
-      name: "AI Text Summarization Web Application",
+      name: "Video Search Feature",
       description: [
-        "Designed a responsive and accessible UI using Tailwind CSS, ensuring a seamless user experience across different devices.",
-        "Built an NLP-powered text summarization tool using FastAPI and Flask, reducing document processing time by ~3 seconds on average."
+        "Used a Python API to download NPR YouTube channel videos and closed captions. Executed a video preprocessing pipeline utilizing OpenCV, FFmpeg, and PyTorchVideo.",
+        "Utilized PostgreSQL as a vector database for creating/storing preprocessed frames as vector embeddings and video transcripts as text embeddings using Word2Vec.",
+        "Leveraged dot product functionality to combine frames and transcripts. Combined video frame and transcript vector embedding to enable efficient and accurate video search capabilities using cosine search similarity on GUI. "
         
       ],
       
       tags: [
-        { name: "Python (Flask, NLTK)", color: "orange-text-gradient" },
-        { name: "HTML", color: "yellow-text-gradient" },
-        { name: "Tailwind CSS", color: "pink-text-gradient" }
+        { name: " Python (Pandas, PyTorch, OpenCV, TensorFlow),", color: "orange-text-gradient" },
+        { name: "PostgreSQL", color: "pink-text-gradient" }
       ],
-          image: summarizer,
-          source_code_link: "https://github.com/yashah9/Summarizer",
+          image: search,
+          source_code_link: "https://github.com/yashah9/VideoSearchFeature",
+    },
+    {
+      name: "INSURANCE CLAIMS ANALYSIS DASHBOARD",
+      description: [
+        "Leveraged MS SQL to extract data for 10000+ clients, ensuring seamless integration with Power BI for real-time insights.",
+        "Performed data cleaning and transformation using Power Query to calculate active/inactive policies, validate data types, and enable automated scheduled refreshes for real-time updates.",
+        "Created a dashboard to analyze and track KPIs for average claim amount across age groups and policy categories."
+        
+      ],
+      tags: [
+        { name: "MS SQL", color: "orange-text-gradient" },
+        { name: "Power BI", color: "pink-text-gradient" },
+        { name: "Power Query", color: "blue-text-gradient" },
+      ],
+      
+          image: dash,
+          source_code_link: "https://github.com/yashah9/Dashboard-Insurance",
+    },
+    {
+      name: "Real time City  Data Streaming Pipeline",
+      description: [
+        "Designed an end-to-end real-time data streaming pipeline for a City ecosystem using IoT devices.",
+        "Developed multiple IoT data producers (vehicle, GPS, traffic, weather) to generate and stream data into Kafka.",
+        "Utilized Apache Spark for real-time processing and structured streaming, resolving schema issues for efficient data transformation.",
+        "Configured AWS services including S3, IAM, Glue, Athena, and Redshift to store, catalog, and query large-scale streaming data."
+      ],
+      tags: [
+        { name: "Kafka", color: "orange-text-gradient" },
+        { name: "Apache Spark", color: "pink-text-gradient" },
+        { name: "AWS(Glue, Athena, Redshift)", color: "blue-text-gradient" },
+      ],
+      
+          image: city,
+          source_code_link: "https://github.com/yashah9/Dashboard-Insurance",
     },
   ];
   
