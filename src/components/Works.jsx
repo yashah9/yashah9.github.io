@@ -9,17 +9,16 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.3, 0.5)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{
           max: 45,
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl w-full max-w-[400px]"
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        {/* Image Container */}
-        <div className="relative w-full h-auto sm:h-[230px]">
+        <div className="relative w-full h-[230px]">
           <img 
             src={image} 
             alt="project_image" 
@@ -39,16 +38,20 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           </div>
         </div>
 
-        {/* Project Info */}
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[20px] sm:text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] sm:text-[16px]">{description}</p>
+          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+
+          {/* ✅ Render Bullet Points for Descriptions */}
+          <ul className="mt-2 text-secondary text-[14px] list-disc pl-5 space-y-1">
+            {description.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
         </div>
 
-        {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p key={tag.name} className={`text-[12px] sm:text-[14px] ${tag.color}`}>
+            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
@@ -57,6 +60,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
     </motion.div>
   );
 };
+
 
 const Works = () => {
   const [loadedProjects, setLoadedProjects] = useState([]);

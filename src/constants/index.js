@@ -143,17 +143,16 @@ import {
     
   ];
   
-
   
   const projects = [
     {
       name: "Trello - Clone",
-  description: [
-    " Designed and developed a Trello-like task management system with a modern UI using Next.js, React.js, and Redux for efficient state management. \n",
-    "Integrated role-based project and task management, allowing teams to assign tasks, set deadlines, and prioritize work efficiently.",
-    "Engineered a RESTful API with Express.js and Node.js, utilizing Prisma ORM with PostgreSQL for structured data storage and retrieval.",
-    "Deployed on AWS, leveraging EC2 for hosting, RDS for database management, Amplify for frontend deployment, S3 for file storage, API Gateway for backend communication, and Cognito for future authentication expansion."
-  ],
+      description: [
+        "Designed and developed a Trello-like task management system with a modern UI using Next.js, React.js, and Redux for efficient state management. \n",
+        "Integrated role-based project and task management, allowing teams to assign tasks, set deadlines, and prioritize work efficiently.",
+        "Engineered a RESTful API with Express.js and Node.js, utilizing Prisma ORM with PostgreSQL for structured data storage and retrieval.",
+        "Deployed on AWS, leveraging EC2 for hosting, RDS for database management, Amplify for frontend deployment, S3 for file storage, API Gateway for backend communication, and Cognito for future authentication expansion."
+      ],
   
   tags: [
     { name: "TypeScript", color: "blue-text-gradient" },
