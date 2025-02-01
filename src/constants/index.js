@@ -14,6 +14,7 @@ import {
     mongodb,
     spark,
     git,
+
     njit,
     kafka,
     city,
@@ -35,7 +36,7 @@ import {
     },
     {
       id: "work",
-      title: "Work",
+      title: "work",
     },
     {
       id: "contact",

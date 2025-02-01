@@ -30,7 +30,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="relative w-full flex justify-center items-end">
+      {/* ✅ Ensures Image Does Not Overlap on Large Screens */}
+      <div className="relative w-full flex justify-center items-end mt-10 lg:mt-20">
         {MemoizedComputersCanvas}
       </div>
 

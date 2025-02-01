@@ -34,9 +34,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    // template_kss4von
-    // service_z90b745
-    // 9wcWUBcZFNl59QnQ0
 
     emailjs.send(
       'service_z90b745', 
