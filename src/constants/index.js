@@ -228,22 +228,6 @@ import {
       source_code_link: "https://github.com/yashah9/Youtube-clone",
     },
     {
-      name: "Video Search Feature",
-      description: [
-        "Used a Python API to download NPR YouTube channel videos and closed captions. Executed a video preprocessing pipeline utilizing OpenCV, FFmpeg, and PyTorchVideo.",
-        "Utilized PostgreSQL as a vector database for creating/storing preprocessed frames as vector embeddings and video transcripts as text embeddings using Word2Vec.",
-        "Leveraged dot product functionality to combine frames and transcripts. Combined video frame and transcript vector embedding to enable efficient and accurate video search capabilities using cosine search similarity on GUI. "
-        
-      ],
-      
-      tags: [
-        { name: " Python (Pandas, PyTorch, OpenCV, TensorFlow),", color: "orange-text-gradient" },
-        { name: "PostgreSQL", color: "pink-text-gradient" }
-      ],
-          image: search,
-          source_code_link: "https://github.com/yashah9/VideoSearchFeature",
-    },
-    {
       name: "INSURANCE CLAIMS ANALYSIS DASHBOARD",
       description: [
         "Leveraged MS SQL to extract data for 10000+ clients, ensuring seamless integration with Power BI for real-time insights.",
