@@ -36,7 +36,7 @@ import {
     },
     {
       id: "work",
-      title: "work",
+      title: "Work",
     },
     {
       id: "contact",

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../style";
@@ -16,14 +16,14 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl w-full max-w-[380px] sm:max-w-[360px] lg:max-w-[340px]"
+        className="bg-tertiary p-5 rounded-2xl w-full max-w-[380px] sm:max-w-[360px] lg:max-w-[340px] overflow-hidden"
       >
         {/* Image Container */}
         <div className="relative w-full h-[230px]">
           <img 
             src={image} 
             alt="project_image" 
-            className="w-full h-full object-cover rounded-2xl"
+            className="w-full h-full object-cover rounded-2xl max-w-full"
           />
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
@@ -67,10 +67,13 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 const Works = () => {
   const [loadedProjects, setLoadedProjects] = useState([]);
 
-  // ✅ Prevent Disappearing Projects on Small Screens
+  // ✅ Prevent Projects from Disappearing
   useEffect(() => {
     setLoadedProjects(projects);
   }, []);
+
+  // ✅ Optimize re-renders using useMemo
+  const memoizedProjects = useMemo(() => loadedProjects, [loadedProjects]);
 
   return (
     <>
@@ -94,16 +97,16 @@ const Works = () => {
         </motion.p>
       </div>
 
-      {/* ✅ Responsive Grid Layout */}
-      {loadedProjects.length > 0 ? (
-        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
-          {loadedProjects.map((project, index) => (
+      {/* ✅ Responsive Grid Layout (Prevents Disappearance) */}
+      <div className="mt-20 min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
+        {memoizedProjects.length > 0 ? (
+          memoizedProjects.map((project, index) => (
             <ProjectCard key={`project-${index}`} index={index} {...project} />
-          ))}
-        </div>
-      ) : (
-        <p className="text-center text-gray-400 mt-10">Loading projects...</p>
-      )}
+          ))
+        ) : (
+          <p className="text-center text-gray-400 mt-10">Loading projects...</p>
+        )}
+      </div>
     </>
   );
 };
