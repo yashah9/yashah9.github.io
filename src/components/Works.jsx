@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect, useMemo } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
@@ -9,13 +11,12 @@ import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div 
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)} 
+      className="w-full flex justify-center"
+    >
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+        options={{ max: 45, scale: 1, speed: 450 }}
         className="bg-tertiary p-5 rounded-2xl w-full max-w-[380px] sm:max-w-[360px] lg:max-w-[340px] overflow-hidden"
       >
         {/* Image Container */}
@@ -65,29 +66,34 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 };
 
 const Works = () => {
-  const [loadedProjects, setLoadedProjects] = useState([]);
+  const [loadedProjects, setLoadedProjects] = useState(projects);
 
-  // ✅ Prevent Projects from Disappearing
+  // ✅ Ensure projects stay loaded on all screen sizes
   useEffect(() => {
     setLoadedProjects(projects);
   }, []);
 
-  // ✅ Optimize re-renders using useMemo
+  // ✅ Optimize Rendering with useMemo
   const memoizedProjects = useMemo(() => loadedProjects, [loadedProjects]);
 
   return (
-    <>
-      {/* Section Header */}
-      <motion.div variants={textVariant()}>
+    <div className="min-h-screen w-full flex flex-col justify-center items-center px-4">
+      {/* ✅ Ensure section never disappears */}
+      <motion.div 
+        variants={textVariant()} 
+        initial="visible" // ✅ Prevents disappearing on first render
+        className="w-full text-center"
+      >
         <p className={styles.sectionSubText}>My work</p>
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
       {/* Section Description */}
-      <div className="w-full flex">
+      <div className="w-full max-w-3xl text-center mt-3">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[16px] sm:text-[17px] max-w-3xl leading-[30px]"
+          initial="visible" // ✅ Ensures this text stays on mobile screens
+          className="text-secondary text-[16px] sm:text-[17px] leading-[30px]"
         >
           Here are some of the projects I've built, showcasing my skills in full-stack 
           development, cloud computing, and scalable system design. Each project is 
@@ -97,8 +103,8 @@ const Works = () => {
         </motion.p>
       </div>
 
-      {/* ✅ Responsive Grid Layout (Prevents Disappearance) */}
-      <div className="mt-20 min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
+      {/* ✅ Responsive Grid Layout */}
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7 w-full">
         {memoizedProjects.length > 0 ? (
           memoizedProjects.map((project, index) => (
             <ProjectCard key={`project-${index}`} index={index} {...project} />
@@ -107,7 +113,7 @@ const Works = () => {
           <p className="text-center text-gray-400 mt-10">Loading projects...</p>
         )}
       </div>
-    </>
+    </div>
   );
 };
 
