@@ -16,8 +16,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl w-full max-w-[380px] sm:max-w-[360px] lg:max-w-[340px]"
       >
+        {/* Image Container */}
         <div className="relative w-full h-[230px]">
           <img 
             src={image} 
@@ -38,20 +39,22 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           </div>
         </div>
 
+        {/* Title & Description */}
         <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <h3 className="text-white font-bold text-[20px] sm:text-[22px]">{name}</h3>
 
-          {/* ✅ Render Bullet Points for Descriptions */}
-          <ul className="mt-2 text-secondary text-[14px] list-disc pl-5 space-y-1">
+          {/* ✅ Render Bullet Points for Description */}
+          <ul className="mt-2 text-secondary text-[14px] sm:text-[16px] list-disc pl-5 space-y-1">
             {description.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
           </ul>
         </div>
 
+        {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+            <p key={tag.name} className={`text-[12px] sm:text-[14px] ${tag.color}`}>
               #{tag.name}
             </p>
           ))}
@@ -61,11 +64,10 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
   );
 };
 
-
 const Works = () => {
   const [loadedProjects, setLoadedProjects] = useState([]);
 
-  // ✅ Fix: Load projects immediately to prevent flickering
+  // ✅ Prevent Disappearing Projects on Small Screens
   useEffect(() => {
     setLoadedProjects(projects);
   }, []);
@@ -78,7 +80,7 @@ const Works = () => {
         <h2 className={styles.sectionHeadText}>Projects.</h2>
       </motion.div>
 
-      {/* Description */}
+      {/* Section Description */}
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
@@ -92,7 +94,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      {/* ✅ Fix: Prevent disappearing projects */}
+      {/* ✅ Responsive Grid Layout */}
       {loadedProjects.length > 0 ? (
         <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-7">
           {loadedProjects.map((project, index) => (
